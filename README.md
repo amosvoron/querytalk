@@ -1,6 +1,6 @@
 # QueryTalk - for a better coding experience
 
-QueryTalk is a lightweight DAL for .NET and SQL Server extremely easy to learn and use. 
+QueryTalk is a lightweight DAL for .NET and SQL Server easy to learn and use. 
 
 ## Motivation
 
