@@ -1,0 +1,7 @@
+﻿--------------------------
+TODO
+--------------------------
+
+1. Exception handling (opcija "Send report")
+2. Check que pasa con fake snk. Does not sign and does not throw error.
+

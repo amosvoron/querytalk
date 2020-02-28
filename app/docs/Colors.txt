@@ -1,0 +1,4 @@
+﻿
+bright blue: #3d87d3
+dark blue:   #072a4d
+footer blue: #042342

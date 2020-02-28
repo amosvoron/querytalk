@@ -1,0 +1,54 @@
+﻿--------------------------
+RULES
+--------------------------
+
+1. Relation types:
+
+	- one-to-many
+	- one-to-one (DEPRECATED)*
+	- self relation
+
+	* One-to-one relation is deprecated because of the following scenario:
+	As QueryTalk aggregates the rows of the many relations storing them into a single asociation (peudo-column),
+	it would be confusing for the user in case that a new relation is added (to the existing one-to-one)
+	and the single-object property is converted into HashSet<>.
+
+2. A link between the two nodes is represented by a SINGLE related node property
+   regardless of the quantity of the relations.
+
+3. When a link between two multi-related nodes is used, the .By method must be used.
+
+4. Self-relation is supported only in a direction from FK to RK.
+   A direction RK to FK (one-to-many) is not supported which means thatc hildren of a self-relation are not processed. 
+
+5. IsCompliant
+   An object is compliant if ALL its columns and parameters are compliant.
+
+6. Object names:
+
+	 - Name: valid CLR name 
+	 - HasSchemaName: true if the node name contains a schema name
+	 - RenameIndex: ix of Renamed<ix>; ix > 0
+	 - NodeName: final node name
+
+   (1) Name is always provided.
+   (2) HasSchemaName is set to true if another object with the same OBJECT_NAME exists.
+   (3) RenameIndex is provided (as greater than 0) if the Name or Name_SchemaName is not unique (in the set of all objects).
+   (4) NodeName is 
+		 - NameRenamed<RenamedIndex>, if RenameIndex is provided
+		 - NameOfSchemaName, if HasSchemaName is true
+		 - else Name
+
+7. Relation names:
+
+	 - Related: related node object
+	 - DataName: final singural or plural name of a related Data class
+	 - DesignerName: final name of a designer class
+
+8. QueryTalkBase:
+
+	(1) If user selects QueryTalkBase => offer a button Recreate.
+	(2) If user press QueryTalkBase link => check if database exists:
+		 - YES: select QueryTalkBase database => Recreate
+		 - NO:  warning
+	(3) Recreate.Click => user must confirm

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1F2A85F-B256-42B3-83A1-15FA7B4FC650}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QueryTalk.Mapper</RootNamespace>
+    <AssemblyName>QueryTalker</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>QueryTalkIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\BitBucket\QueryTalkRepo\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QueryTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a81295b9c1f73d6e, processorArchitecture=MSIL">
+      <HintPath>packages\QueryTalk.1.3.0\lib\net40\QueryTalk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="building\Builder_Designer.cs" />
+    <Compile Include="building\Builder_Data.cs" />
+    <Compile Include="building\Builder_Compile.cs" />
+    <Compile Include="building\Builder_AssemblyInfo.cs" />
+    <Compile Include="core\Common.cs" />
+    <Compile Include="core\Connect.cs" />
+    <Compile Include="core\AccountEventArgs.cs" />
+    <Compile Include="core\ConnectionCheckEventArgs.cs" />
+    <Compile Include="core\Start.cs" />
+    <Compile Include="core\Log.cs" />
+    <Compile Include="core\GuiType.cs" />
+    <Compile Include="core\StartType.cs" />
+    <Compile Include="core\Version.cs" />
+    <Compile Include="core\License.cs" />
+    <Compile Include="core\Pull.cs" />
+    <Compile Include="enums\TaskStatus.cs" />
+    <Compile Include="Globals\GlobalResources.cs" />
+    <Compile Include="gui\connect\FreeTrialEmailUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\connect\FreeTrialEmailUI.Designer.cs">
+      <DependentUpon>FreeTrialEmailUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\connect\FreeTrialExpiredUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\connect\FreeTrialExpiredUI.Designer.cs">
+      <DependentUpon>FreeTrialExpiredUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\connect\AutoConnectUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\connect\AutoConnectUI.Designer.cs">
+      <DependentUpon>AutoConnectUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\start\Step5_VisualStudioUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\start\Step5_VisualStudioUI.Designer.cs">
+      <DependentUpon>Step5_VisualStudioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\start\Step4_QueryTalkBaseUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\start\Step4_QueryTalkBaseUI.Designer.cs">
+      <DependentUpon>Step4_QueryTalkBaseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\start\Step3_ServerUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\start\Step3_ServerUI.Designer.cs">
+      <DependentUpon>Step3_ServerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\start\Step2_PullUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\start\Step2_PullUI.Designer.cs">
+      <DependentUpon>Step2_PullUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\start\IntroUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\start\IntroUI.Designer.cs">
+      <DependentUpon>IntroUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\mappingUI\MappingUI_Setters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\mappingUI\MappingUI_EventHandlers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\connect\AccountUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\connect\AccountUI.Designer.cs">
+      <DependentUpon>AccountUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\start\Step1_RepositoryUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\start\Step1_RepositoryUI.Designer.cs">
+      <DependentUpon>Step1_RepositoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces\ILateInitializer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Anonymous.cs" />
+    <Compile Include="Security\DownloadManager.cs" />
+    <Compile Include="Security\ClientDownload.cs" />
+    <Compile Include="Security\UpdateManager.cs" />
+    <Compile Include="Security\ResponseType.cs" />
+    <Compile Include="Security\RegistryManager.cs" />
+    <Compile Include="Security\Message.cs" />
+    <Compile Include="Security\MachineManager.cs" />
+    <Compile Include="Security\CryptographyManager.cs" />
+    <Compile Include="Security\CryptoContext.cs" />
+    <Compile Include="Security\CommunicationManager.cs" />
+    <Compile Include="Security\ConnectionEncryption.cs" />
+    <Compile Include="enums\ErrorCaller.cs" />
+    <Compile Include="gui\AboutUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\AboutUI.Designer.cs">
+      <DependentUpon>AboutUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\SettingsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\SettingsUI.Designer.cs">
+      <DependentUpon>SettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\NotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\NotifyForm.Designer.cs">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\NetDirectoryUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\NetDirectoryUI.Designer.cs">
+      <DependentUpon>NetDirectoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ResumeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\ResumeUI.Designer.cs">
+      <DependentUpon>ResumeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\mappingUI\MappingUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\mappingUI\MappingUI.Designer.cs">
+      <DependentUpon>MappingUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces\mapping\Column.cs" />
+    <Compile Include="interfaces\mapping\RelationColumn.cs" />
+    <Compile Include="interfaces\mapping\Relation.cs" />
+    <Compile Include="interfaces\mapping\FuncOrProc.cs" />
+    <Compile Include="interfaces\mapping\Parameter.cs" />
+    <Compile Include="interfaces\mapping\TableOrView.cs" />
+    <Compile Include="interfaces\mapping\ClrName.cs" />
+    <Compile Include="enums\ColumnKeyType.cs" />
+    <Compile Include="building\Builder.cs" />
+    <Compile Include="interfaces\IFinalizer.cs" />
+    <Compile Include="interfaces\INode.cs" />
+    <Compile Include="building\Builder_Invokers.cs" />
+    <Compile Include="building\KeyFile.cs" />
+    <Compile Include="enums\RelationType.cs" />
+    <Compile Include="enums\DataGroup.cs" />
+    <Compile Include="interfaces\IColumn.cs" />
+    <Compile Include="interfaces\IName.cs" />
+    <Compile Include="interfaces\mapping\MappingHandler.cs" />
+    <Compile Include="enums\ObjectType.cs" />
+    <Compile Include="enums\ParameterMode.cs" />
+    <Compile Include="enums\ProcessState.cs" />
+    <Compile Include="sql\Query.cs" />
+    <Compile Include="enums\TypeArgs.cs" />
+    <Compile Include="interfaces\mapping\TypeInfo.cs" />
+    <Compile Include="interfaces\mapping\TypeMapping.cs" />
+    <Compile Include="enums\MessageType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="core\RegistryHandler.cs" />
+    <EmbeddedResource Include="gui\connect\FreeTrialEmailUI.resx">
+      <DependentUpon>FreeTrialEmailUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\connect\FreeTrialExpiredUI.resx">
+      <DependentUpon>FreeTrialExpiredUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\connect\AutoConnectUI.resx">
+      <DependentUpon>AutoConnectUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\start\Step5_VisualStudioUI.resx">
+      <DependentUpon>Step5_VisualStudioUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\start\Step4_QueryTalkBaseUI.resx">
+      <DependentUpon>Step4_QueryTalkBaseUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\start\Step3_ServerUI.resx">
+      <DependentUpon>Step3_ServerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\start\Step2_PullUI.resx">
+      <DependentUpon>Step2_PullUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\start\IntroUI.resx">
+      <DependentUpon>IntroUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\AboutUI.resx">
+      <DependentUpon>AboutUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\start\Step1_RepositoryUI.resx">
+      <DependentUpon>Step1_RepositoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\connect\AccountUI.resx">
+      <DependentUpon>AccountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\SettingsUI.resx">
+      <DependentUpon>SettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\NotifyForm.resx">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\NetDirectoryUI.resx">
+      <DependentUpon>NetDirectoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ResumeUI.resx">
+      <DependentUpon>ResumeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\mappingUI\MappingUI.resx">
+      <DependentUpon>MappingUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\Colors.txt" />
+    <Content Include="docs\TODO.txt" />
+    <Content Include="docs\RULES.txt" />
+    <None Include="Resources\ajax-loader.gif" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\logo_250_white.png" />
+    <None Include="Resources\pull.png" />
+    <None Include="Resources\zapatilla_1200.jpg" />
+    <None Include="Resources\ajax-loader-yellow.gif" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\logo2white.png" />
+    <None Include="Resources\pull_white.png" />
+    <None Include="Resources\icon_white.png" />
+    <None Include="Resources\net-directory.png" />
+    <None Include="Resources\problems_video.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\problems_video2.png" />
+    <None Include="Resources\video.png" />
+    <Content Include="sql\QueryTalkBaseSQL.txt" />
+    <Content Include="sql\SQL-LIMITED.txt" />
+    <Content Include="sql\SQL.txt" />
+    <Content Include="QueryTalk.ico" />
+    <Content Include="QueryTalkIcon.ico" />
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\delete2.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\reset2.png" />
+    <None Include="Resources\arrow2.png" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\folder2.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\QueryTalkIcon.ico" />
+    <None Include="Resources\logo_250.png" />
+    <None Include="Resources\icon_350_350.png" />
+    <None Include="Resources\QueryTalk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
