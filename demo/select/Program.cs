@@ -9,6 +9,7 @@ namespace QueryTalkDemo
         {
             d.SetConnection(@"Data Source=<your server>;Initial Catalog=QueryTalkBase;Integrated Security=True;");
 
+            // Select all persons 
             var result = d.From("dbo.Person").Select()   
                 .Go();
         }
