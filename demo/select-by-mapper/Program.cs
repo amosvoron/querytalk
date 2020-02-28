@@ -1,5 +1,6 @@
 ﻿using System;
 using QueryTalk;
+using s = QueryTalk.Db.QueryTalkBase;
 
 namespace QueryTalkDemo
 {
@@ -9,8 +10,8 @@ namespace QueryTalkDemo
         {
             d.SetConnection(@"Data Source=UNICE\SQL2016;Initial Catalog=QueryTalkBase;Integrated Security=True;");
 
-            // Select all persons
-            var result = d.From("dbo.Person").Select()
+            // Select all persons (by mapper)
+            var result = s.Person
                 .Test()
                 .Go();
 

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0E4476B-D1C5-4AE5-B4A6-837C64323B08}</ProjectGuid>
+    <ProjectGuid>{A0963FD6-A388-4E83-AB26-AF9D3109E4D5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>select</RootNamespace>
-    <AssemblyName>select</AssemblyName>
+    <RootNamespace>select_by_mapper</RootNamespace>
+    <AssemblyName>select-by-mapper</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,9 @@
   <ItemGroup>
     <Reference Include="QueryTalk">
       <HintPath>..\..\..\Repository\QueryTalk.dll</HintPath>
+    </Reference>
+    <Reference Include="QueryTalk.Db.QueryTalkBase">
+      <HintPath>..\..\..\Repository\QueryTalk.Db.QueryTalkBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
