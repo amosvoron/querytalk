@@ -7,7 +7,7 @@ namespace QueryTalkDemo
     {
         static void Main(string[] args)
         {
-            d.SetConnection(@"Data Source=UNICE\SQL2016;Initial Catalog=QueryTalkBase;Integrated Security=True;");
+            d.SetConnection(@"Data Source=<your server>;Initial Catalog=QueryTalkBase;Integrated Security=True;");
 
             var result = d.From("dbo.Person").Select()   
                 .Go();
