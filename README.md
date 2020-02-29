@@ -55,7 +55,7 @@ QueryTalk:
 
 ## License
 
-Apache
+MIT
 
 
 
