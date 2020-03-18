@@ -1,3 +1,3 @@
-# Wall
+# lib
 
 QueryTalk's library. 
