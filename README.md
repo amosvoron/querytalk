@@ -4,9 +4,7 @@ QueryTalk is a lightweight DAL for .NET and SQL Server easy to learn and use.
 
 ## Idea
 
-QueryTalk was developed with a purpose to be simple and efficient DAL for .NET. The developer should write as few lines of code as possible and should not repeat actions that have already been done when the data model in the database was implemented.   
-
-For that reason, QueryTalk does not require any entity modelling. Furthermore, the storage (entity) classes are created behind the scene and stored in the separate DLL file. So the application code is clean and the developer can focus on real job - on *querying*.
+QueryTalk was developed with a purpose to be simple and efficient DAL for .NET. The developer should write as few lines of code as possible and should not repeat actions that have already been done when the data model in the database was implemented. For that reason, QueryTalk does not require any entity modelling. Furthermore, the storage (entity) classes are created behind the scene and stored in the separate DLL file. So the application code is clean and the developer can focus on real job - on *querying*.
 
 ## Summary
 
